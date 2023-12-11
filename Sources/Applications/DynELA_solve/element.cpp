@@ -18,6 +18,7 @@
 // revision date : 
 #include <femLibrary.h>
 #include <InputDyn.h>
+#include <lsdynaReader.h>
 
 String parsedFileName;
 
@@ -43,6 +44,8 @@ int main() {
   // model.add(&allES,1,1);
 
   ElementSet allES();
+  
+  lsdynaReader("sphere-plate.k");
   // model.add(&allES,1,1);
 
   // NodeSet topNS ("NS_Top");
