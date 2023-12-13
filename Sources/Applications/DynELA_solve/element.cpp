@@ -48,7 +48,7 @@ int main() {
   lsdynaReader("sphere-plate.k");
   // model.add(&allES,1,1);
 
-  // NodeSet topNS ("NS_Top");
+  NodeSet topNS ();
   // model.add(&topNS,   5);
   // model.add(&topNS,   6);
   // model.add(&topNS,   7);
