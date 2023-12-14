@@ -19,6 +19,9 @@
 #include <femLibrary.h>
 #include <InputDyn.h>
 #include <lsdynaReader.h>
+#include <femLibrary.h>
+
+#include <Select.h>
 
 String parsedFileName;
 
@@ -48,24 +51,26 @@ int main() {
   lsdynaReader("sphere-plate.k");
   // model.add(&allES,1,1);
 
-  // NodeSet topNS ("NS_Top");
-  // model.add(&topNS,   5);
-  // model.add(&topNS,   6);
-  // model.add(&topNS,   7);
-  // model.add(&topNS,   8);
+  NodeSet topNS;
+
+  topNS.add(5);
+  topNS.add(6);
+  topNS.add(7);
+  topNS.add(8);
   
 	// omp_set_num_threads(1);
 	
-  // NodeSet bottomNS("NS_Bottom");   model.add(&bottomNS, 1);
+  NodeSet bottomNS;   
+  bottomNS.add(1,4,1);
   // NodeSet bottomNSy("NS_Bottomy"); model.add(&bottomNS, 2);
   // NodeSet bottomNSx("NS_Bottomx"); model.add(&bottomNS, 3);
   // NodeSet bottomNSz("NS_Bottomz"); model.add(&bottomNS, 4);
  
   // ElasticLaw *hardLaw = new ElasticLaw;
  
-  // Material steel("Steel");
+  Material steel;
   // steel.setHardeningLaw(hardLaw);
-  // steel.youngModulus = young;
+  steel.youngModulus = young;
   // steel.poissonRatio = poisson;
   // steel.density = density;
 
