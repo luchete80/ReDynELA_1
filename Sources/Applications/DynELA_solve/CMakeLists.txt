@@ -18,8 +18,8 @@ LINK_DIRECTORIES(${LIBRARY_OUTPUT_PATH})
 #ADD_DEFINITIONS(-Wall -O2)
 
 # Création d'un exécutable
- ADD_EXECUTABLE(DynELA_solve ${SRCS})
- TARGET_LINK_LIBRARIES(DynELA_solve dnlFE dnlLA dnlBT lapack )
+# ADD_EXECUTABLE(DynELA_solve ${SRCS})
+# TARGET_LINK_LIBRARIES(DynELA_solve dnlFE dnlLA dnlBT lapack )
 # #INSTALL(TARGETS DynELA_solve DESTINATION ${DynELA_base}/bin)
 
 
