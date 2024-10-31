@@ -70,7 +70,7 @@ int main() {
  
   Material steel;
   // steel.setHardeningLaw(hardLaw);
-  steel.youngModulus = young;
+  //steel.youngModulus = young;
   // steel.poissonRatio = poisson;
   // steel.density = density;
 
